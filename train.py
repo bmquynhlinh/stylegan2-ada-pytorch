@@ -535,6 +535,11 @@ def main(ctx, outdir, dry_run, **config_kwargs):
 #----------------------------------------------------------------------------
 
 if __name__ == "__main__":
+    import warnings
+    import gc
+    gc.collect()
+
+    warnings.filterwarnings("ignore")
     main() # pylint: disable=no-value-for-parameter
 
 #----------------------------------------------------------------------------
